@@ -3,7 +3,7 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 20vmin;
   pointer-events: none;
 }
 
@@ -15,7 +15,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,4 +35,156 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+body {
+  background: linear-gradient(
+    90deg,
+    rgb(16, 16, 18) 0%,
+    rgb(17, 17, 17) 100%
+  );
+}
+.note-app {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  width: 520px;
+  min-height: 600px;
+  background: #161a2b;
+  text-align: center;
+  margin: 128px auto;
+  border-radius: 10px;
+  padding-bottom: 32px;
+}
+
+h1 {
+  margin: 32px 0;
+  color: #fff;
+  font-size: 24px;
+}
+
+.complete {
+  text-decoration: line-through;
+  opacity: 0.4;
+}
+
+.note-form {
+  margin-bottom: 32px;
+}
+
+.note-input {
+  padding: 14px 32px 14px 16px;
+  border-radius: 4px 0 0 4px;
+  border: 2px solid #e5e0ee;
+  outline: none;
+  width: 320px;
+  background: transparent;
+  color: #fff;
+}
+
+.note-input::placeholder {
+  color: #e2e2e2;
+}
+
+.note-button {
+  padding: 16px;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  outline: none;
+  background: linear-gradient(
+    90deg,
+    rgb(77, 75, 81) 0%,
+    rgb(60, 58, 60) 100%
+  );
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.note-input.edit {
+  border: 2px solid #149fff;
+}
+
+.note-button.edit {
+  background: linear-gradient(
+    90deg,
+    rgba(20, 159, 255, 1) 0%,
+    rgba(17, 122, 255, 1) 100%
+  );
+  padding: 16px 22px;
+}
+
+.note-container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.note-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4px auto;
+  color: #fff;
+  background: linear-gradient(
+    90deg,
+    rgb(91, 89, 88) 0%,
+    rgb(64, 62, 61) 100%
+  );
+
+  padding: 16px;
+  border-radius: 5px;
+  width: 90%;
+}
+
+.note-row:nth-child(4n + 1) {
+  background: linear-gradient(
+    90deg,
+    rgb(83, 82, 85) 0%,
+    rgb(74, 73, 75) 100%
+  );
+}
+
+.note-row:nth-child(4n + 2) {
+  background: linear-gradient(
+    90deg,
+    rgb(72, 68, 71) 0%,
+    rgb(68, 65, 67) 100%
+  );
+}
+
+.note-row:nth-child(4n + 3) {
+  background: linear-gradient(
+    90deg,
+    rgb(66, 67, 68) 0%,
+    rgb(68, 69, 71) 100%
+  );
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.delete-icon {
+  margin-right: 5px;
+  color: #fff;
+}
+
+.edit-icon {
+  color: #fff;
+}
+
+.content {
+  z-index: -1000;
 }
