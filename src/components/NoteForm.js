@@ -13,27 +13,12 @@ function NoteForm(props) {
 		setInput(e.target.value);
 	};
 
-	// function isValidUrl(str) {
-	// 	const pattern = new RegExp(
-	// 	  '^([a-zA-Z]+:\\/\\/)?' + // protocol
-	// 		'((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' + // domain name
-	// 		'((\\d{1,3}\\.){3}\\d{1,3}))' + // OR ip (v4) address
-	// 		'(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*' + // port and path
-	// 		'(\\?[;&a-z\\d%_.~+=-]*)?' + // query string
-	// 		'(\\#[-a-z\\d_]*)?$', // fragment locator
-	// 	  'i'
-	// 	);
-	// 	return pattern.test(str);
-	//   }
 
 	  function isValidHttpUrl(string) {
 		try {
 			const url = new URL(string);
-		  	console.log('chow constructor url >>', url);
 			  var inputElement = document.getElementsByName('url');
-			  console.log('found input element >>', inputElement);
 			  let check = inputElement[0].checkValidity();
-			  console.log('check validity >>', check);
 			// return url.protocol === "http:" || url.protocol === "https:";
 		  return Boolean(url) || check; 
 
@@ -49,8 +34,6 @@ function NoteForm(props) {
 		// e.persist();
 
 		const check = isValidHttpUrl(input);
-		console.log('input >>', input);
-		console.log('check if url valid >>', check);
 		setIsValid(check);
 
 		props.onSubmit({
