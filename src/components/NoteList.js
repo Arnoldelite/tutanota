@@ -6,7 +6,6 @@ function NoteList () {
 	const [notes, setNotes] = useState([]);
 
 	const addNote = (note) => {
-		console.log('received url data >>', note);
 
 		if (!note.text || note.text === ' ' || /^\$*$/.test(note.text)){
 			return;
