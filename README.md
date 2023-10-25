@@ -85,12 +85,12 @@ The check for the URL format and the existence check shall be triggered as the u
      A URL ( Uniform Resource Locator) is the address of a given resource on the web. Typially, a URL consists of three parts. protocol, domain and path. For example: https://github.com/Arnoldelite using this URL as an example, the protocol is https, domain is github.com and the path is Arnoldelite.
 
 
-	> My solution makes use of the semantic html input tag with type url to check the initial format of the URL as the user types. on submit, and after the intial format check, the string is sent to a handler that serves as the mocked server call. This function makes use of the new URL() default javascript constructor to check for the existence. it returns a boolean with the details of the URl i.e. host, domain and path and other usefull details or throw an error if the format is incorrect but because of our initial check with the semantic input html tag we would not get to that path.
+My solution makes use of the semantic html input tag with type url to check the initial format of the URL as the user types. on submit, and after the intial format check, the string is sent to a handler that serves as the mocked server call. This function makes use of the new URL() default javascript constructor to check for the existence. it returns a boolean with the details of the URl i.e. host, domain and path and other usefull details or throw an error if the format is incorrect but because of our initial check with the semantic input html tag we would not get to that path.
 
-	extra features to ease usability:
-	- user can edit previous URLs in the form of notes.
-	- user can delete previous verified or unverified urls.
-	- unique visible identifier for unverified url.
+extra features to ease usability:
+- user can edit previous URLs in the form of notes.
+- user can delete previous verified or unverified urls.
+- unique visible identifier for unverified url.
 
 
 
