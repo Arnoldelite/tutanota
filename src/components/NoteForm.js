@@ -21,7 +21,6 @@ function NoteForm(props) {
 
 	//mock server call with async function that returns a promise
 	function isValidHttpUrl(urlToBeTested) {
-		console.log('passed in string >>', urlToBeTested);
 		return new Promise((resolve, reject) => {
 
 		try {
@@ -60,7 +59,6 @@ function NoteForm(props) {
 		.then((result) => {		
 			setIsValid(result);
 			const parts = input.split('/');
-			console.log('check file type >>', input);
   			const lastPart = parts[parts.length - 1];
 
 			// Check if the last part has a file extension (e.g., ends with .txt, .pdf, .xlsx or .json) this could also be checked using regex
