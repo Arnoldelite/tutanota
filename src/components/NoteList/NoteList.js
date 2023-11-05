@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import NoteForm from './NoteForm';
-import Note from './Note';
+import NoteForm from '../NoteForm/NoteForm';
+import Note from '../Note/Note';
 
 function NoteList () {
 	const [notes, setNotes] = useState([]);
@@ -42,7 +42,7 @@ function NoteList () {
 
 	return (
 		<div>
-			<h1> Enter URL to Verify !</h1>
+			<h1> Enter URL to Verify!</h1>
 			<NoteForm onSubmit={addNote}/>
 			<Note notes={notes} completeNote={completeNote} removeNote={removeNote} updateNote={updateNote}/>
 		</div>

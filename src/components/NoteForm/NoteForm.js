@@ -1,4 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
+import './NoteForm.css'
+
 
 function NoteForm(props) {
 	const [input, setInput] = useState('');
@@ -94,9 +96,9 @@ function NoteForm(props) {
 	};
 
 	return (
-		<form className="note-form" onSubmit={handleSubmit}>
-			<input type="text" placeholder={ props.edit ? 'edit existing url!' : 'Enter url to verify!'} value={input} data-testid="add-note" name='url' className='note-input' onChange={handleChange} ref={inputRef}/>
-			<button disabled={input === ''} className="note-button"> { props.edit ? 'edit url entry!' : 'Verify url!'} </button>
+		<form data-testid="note-form" className="note-form" onSubmit={handleSubmit}>
+			<input type="text" placeholder={ props.edit ? 'edit existing url' : 'Enter url to verify'} value={input} data-testid="add-url" name='url' className='note-input' onChange={handleChange} ref={inputRef}/>
+			<button disabled={input === ''} className="note-button"> { props.edit ? 'Edit url entry' : 'Verify url'} </button>
 		</form>
 	);
 
